@@ -11,7 +11,7 @@ import (
 	"os"
 )
 
-const version = "asyncapi-converter 0.1.0-rc1"
+var version string
 
 func main() {
 	usage := fmt.Sprintf(`
@@ -28,7 +28,7 @@ func main() {
     --toYAML    produces results in yaml format instead json
     --id=<id>   allows to specify application id`, v2.AsyncapiVersion)
 
-	opts, err := docopt.ParseArgs(usage, nil, version)
+	opts, err := docopt.ParseArgs(usage, nil, fmt.Sprintf(`asyncapi-converter %s`, version))
 	if err != nil {
 		log.Fatal(err)
 	}
