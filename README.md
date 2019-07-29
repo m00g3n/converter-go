@@ -1,6 +1,6 @@
 # AsyncAPI Converter
 
-[![Build Status](https://travis-ci.org/m00g3n/converter-go.svg?branch=master)](https://travis-ci.org/m00g3n/converter-go)
+[![Build Status](https://travis-ci.org/m00g3n/converter-go.svg?branch=master)](https://travis-ci.org/m00g3n/converter-go) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/m00g3n/converter-go) ![GitHub last commit](https://img.shields.io/github/last-commit/m00g3n/converter-go) ![GitHub contributors](https://img.shields.io/github/contributors/m00g3n/converter-go) ![GitHub](https://img.shields.io/github/license/m00g3n/converter-go)
 
 ## Overview
 

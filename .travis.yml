@@ -9,9 +9,9 @@ env:
 script:
   - go vet ./...
   - go test ./...
-  - env GOOS=darwin GOARCH=amd64 go build -o=api-converter.darwin.amd64 ./cmd/api-converter/main.go
-  - env GOOS=linux GOARCH=amd64 go build -o=api-converter.linux.amd64 ./cmd/api-converter/main.go
-  - env GOOS=windows GOARCH=amd64 go build -o=api-converter.windows.amd64.exe ./cmd/api-converter/main.go
+  - env GOOS=darwin GOARCH=amd64 go build -ldflags "-X main.version=${TRAVIS_BUILD_NUMBER}" -o=api-converter.darwin.amd64 ./cmd/api-converter/main.go
+  - env GOOS=linux GOARCH=amd64 go build -ldflags "-X main.version=${TRAVIS_BUILD_NUMBER}" -o=api-converter.linux.amd64 ./cmd/api-converter/main.go
+  - env GOOS=windows GOARCH=amd64 go build -ldflags "-X main.version=${TRAVIS_BUILD_NUMBER}" -o=api-converter.windows.amd64.exe ./cmd/api-converter/main.go
 
 deploy:
   provider: releases
